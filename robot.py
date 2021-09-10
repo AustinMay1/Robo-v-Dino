@@ -1,22 +1,22 @@
+from weapon import Weapon 
+
 class Robot:
-    def __init__ (self):
-        self.name = ' '
-        self.health = 100
+    def __init__ (self, name, health, weapon):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        
               
-    def set_name (self):
-        self.name = input("Please choose a name for your robot.")
-        print("Robot name: ", self.name)
+    
+    def robot_info (self):
+        print('Robots Name: ', self.name)
+        print('Robots Health: ', self.health)
+        print('Robots Weapon: ', self.weapon.wep_type)
+        print('Attack Power: ', self.weapon.attack_power)
+        
 
-    def avail_health (self):
-        print("Your robots current health is: ", self.health)
-
-class Weapon:
-    def __init__ (self):
-        self.weapon = 'Sword'
-        self.attack_power = 25
-
-    def display_weapon (self):
-        print("Your current weapon is: ",self.weapon," with an attack power of: ",self.attack_power)
+    def robo_attack (self, dinosaur):
+        dinosaur.health -= self.wep_power
 
     
 
